@@ -9,6 +9,22 @@
 
 %define installable_zip 1
 
+%define droid_target_aarch64 1
+%define android_version_major 11
+
+%define android_config \
+#define MALI_QUIRKS 1\
+%{nil}
+
+%define straggler_files \
+/bugreports\
+/cache\
+/d\
+/product\
+/sdcard\
+/system_ext\
+%{nil}
+
 %include rpm/dhd/droid-hal-device.inc
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
